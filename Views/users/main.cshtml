@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<div id="content" style="position:relative;right:-3000px">
+    <hr />
+    <div class="row">
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height: 200px; background-image: linear-gradient(black,blue)">
+                <div class="card-header bg-success text-center text-white">
+                   اعتباربخشی حوزه پرستاری
+                </div>
+                <div class="card-body" style="text-align:center">
+                    <a class="btn btn-outline-success btn-rounded" asp-action="parastari">محتوا</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height: 200px; background-image: linear-gradient(black,blue)">
+                <div class="card-header bg-success text-center text-white">
+                    فیلم‌های آموزشی کاربری تجهیزات
+                </div>
+                <div class="card-body" style="text-align:center">
+                    <a class="btn btn-outline-success btn-rounded" asp-action="tajhizat">محتوا</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-danger text-center text-white">
+                    آزمایشگاه
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/azmayeshgah.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-info text-center text-white">
+                    بخش بستری
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/bakhsh_bastari.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-success text-center text-white">
+                    بیمه گری بستری
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/bimegari_bastari.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-dark text-center text-white">
+                    بیمه گری سرپایی
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/bimegari_sarpayi.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-warning text-center text-white">
+                    مدارک پزشکی
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/madarek_pezeshki.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-primary text-center text-white">
+                    اتاق عمل
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/otagh_amal.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-danger text-center text-white">
+                    صندوق
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/sandogh.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3  m-3">
+            <div class="card shadow-lg" style="height:200px">
+                <div class="card-header bg-info text-center text-white">
+                    ترخیص
+                </div>
+                <div class="card-body">
+                    <video style="width:100%;height:100%" controls>
+                        <source src="~/film/tarkhis.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(() => {
+            $("#content").animate({ right: "0" });
+            $(window).scrollTop($("#back").offset().top);
+        });
+    </script>
+    <script>
+        function move_back() {
+            $("#form").submit(function(e) {
+                e.preventDefault();
+            });
+            if (span.show() != true) {
+                $("#content").animate({ right: "-3000" });
+                $("#form").submit();
+            }
+        }
+    </script>
+}
